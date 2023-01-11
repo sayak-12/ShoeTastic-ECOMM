@@ -32,3 +32,17 @@ bullets.forEach((bullet)=>{
         activeimage.setAttribute("src", srcname);
     })
 })
+const selec = document.querySelectorAll(".clrband");
+selec.forEach((selecc)=>{
+    selecc.addEventListener("click", ()=>{
+        for (let i = 0; i < selec.length; i++) {
+            const b = selec[i];
+            if(b.classList.contains("active")){
+                b.classList.remove("active");
+            } 
+        }selecc.classList.add("active");
+        // const imgIn = bullet.querySelector("img");
+        // const srcname= imgIn.getAttribute("src");
+        // activeimage.setAttribute("src", srcname);
+    })
+})
